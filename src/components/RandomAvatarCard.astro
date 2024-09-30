@@ -1,0 +1,22 @@
+---
+const randomSeed = Math.random().toString(36).substring(2, 10);
+const URL_RANDOM_AVATAR = `https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=${randomSeed}`;
+const descriptions = [
+  "One, two.",
+  "A lover of nature and animals.",
+  "A wise wizard with great power.",
+  "A brave warrior in search of justice.",
+  "An explorer of the mysteries of the universe.",
+  "A brilliant inventor who changes the world.",
+  "One person conquers the world.",
+];
+
+const randomDescription = descriptions[Math.floor(Math.random() * descriptions.length)];
+---
+
+<div style="width: 350px; height: 400px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+  <img src={URL_RANDOM_AVATAR} alt="Avatar aleatorio" style="width: 150px; height: 150px;" />
+  <h2 style="margin-top: 10px;">Avatar Aleatorio</h2>
+  <h4 style="margin-top: 10px;">description</h4>
+  <p style="text-align: center; color: #666;">{randomDescription}</p>
+</div>

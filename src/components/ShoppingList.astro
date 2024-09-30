@@ -2,20 +2,11 @@
 const { items } = Astro.props;
 ---
 
-<ul>
-  {items.map((item, index) => (
-    <li key={index}>{item}</li>
-  ))}
-</ul>
-
-<style>
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-
-  li {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-</style>
+<div style="border: 1px solid #ccc; border-radius: 10px; padding: 20px; background-color: #f9f9f9;">
+  <h2>Lista de Compras</h2>
+  <ul>
+    {items.map((item: unknown) => (
+      <li key={item} style="margin: 5px 0; color: #333;">{item}</li>
+    ))}
+  </ul>
+</div>

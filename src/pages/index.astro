@@ -1,7 +1,7 @@
 ---
 import IncrementButton from '../components/IncrementButton.astro';
+import RandomAvatarCard from '../components/RandomAvatarCard.astro';
 import ShoppingList from '../components/ShoppingList.astro';
-
 const buyList = [
   'Controller',
   'Bread',
@@ -12,11 +12,16 @@ const buyList = [
   'Milk'
 ];
 ---
-
-<html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Avatar Aleatorio</title>
+  </head>
   <body>
-    <h2>Shopping of the week</h2>
-   <!--  <IncrementButton /> -->
-    <ShoppingList items={buyList} />
+    <h1 style="text-align: center;">Generar de Avatar Aleatorio</h1>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <RandomAvatarCard />
+    
+    </div>
   </body>
 </html>
