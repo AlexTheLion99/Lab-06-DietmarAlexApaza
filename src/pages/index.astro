@@ -1,10 +1,22 @@
 ---
 import IncrementButton from '../components/IncrementButton.astro';
+import ShoppingList from '../components/ShoppingList.astro';
+
+const buyList = [
+  'Controller',
+  'Bread',
+  'Water',
+  'Notebook',
+  'Math Book',
+  'Choco Bar',
+  'Milk'
+];
 ---
 
 <html>
   <body>
-    <h2>Astro + React + TS</h2>
-    <IncrementButton />
+    <h2>Shopping of the week</h2>
+   <!--  <IncrementButton /> -->
+    <ShoppingList items={buyList} />
   </body>
 </html>

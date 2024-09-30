@@ -1,0 +1,21 @@
+---
+const { items } = Astro.props;
+---
+
+<ul>
+  {items.map((item, index) => (
+    <li key={index}>{item}</li>
+  ))}
+</ul>
+
+<style>
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+</style>
