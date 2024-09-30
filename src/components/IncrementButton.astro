@@ -1,0 +1,33 @@
+---
+let value = 5;
+---
+
+<button id="incrementButton">{value}</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('incrementButton');
+    if (button) {
+      button.addEventListener('click', () => {
+        const currentValue = button.textContent ? parseInt(button.textContent) : 0;
+        button.textContent = (currentValue + 50).toString();
+      });
+    }
+  });
+</script>
+
+<style>
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
